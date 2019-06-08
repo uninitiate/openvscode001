@@ -2,8 +2,7 @@ FROM gitpod/workspace-full:latest
 
 USER root
 
-RUN apt-get update                 \
-    &&                             \   # your stuff inserted here
+RUN apt-get update                 \  # your stuff inserted here
     && apt-get clean               \
     && rm -rf /var/cache/apt/*     \
     && rm -rf /var/lib/apt/lists/* \
