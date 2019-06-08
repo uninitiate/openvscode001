@@ -1,3 +1,13 @@
 image:
   file: Dockerfile
 
+
+ports:
+  - port: 8001
+
+
+tasks:        
+    - command: apachectl start               &&
+               gp await-port 8001            && 
+               gp preview $(gp url 8001)     
+   
