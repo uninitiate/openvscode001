@@ -5,12 +5,12 @@ ports:
   - port: 8001
 
 tasks:
-  -  init: mkdir /workspace/my-gitpod-basics/gitpod-logs                        &&
+  -  init: mkdir /workspace/my-gitpod-basics/gitpod-logs                   &&
            touch /workspace/my-gitpod-basics/gitpod-logs/myGitpodLog.txt 
            
              
              
-     command: echo "Start the .gitpod.yml installation"         &>> /workspace/my-gitpod-basics/gitpod-logs/myGitpodLog.txt     && 
+     command: echo "Start the .gitpod.yml installation"         &>> /workspace/my-gitpod-basics/gitpod-logs/myGitpodLog.txt      && 
      
      
      
