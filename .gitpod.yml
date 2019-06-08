@@ -1,0 +1,20 @@
+image:
+  file: Dockerfile
+
+ports:
+  - port: 8001
+
+tasks:
+  -  init: mkdir /workspace/my-gitpod-dockerfile-cordova/logs     &&
+           touch /workspace/my-gitpod-dockerfile-cordova/logs.txt 
+           
+             
+             
+     command: echo "Start the .gitpod.yml installation\n"         &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  && 
+     
+              echo "Starting Apache\n"                            &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
+              apachectl start                                                                                           &&
+              gp await-port 8001                                                                                        && 
+              gp preview $(gp url 8001)                                                                                 &&
+              
+              echo "Last line in logs\n"                          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  
