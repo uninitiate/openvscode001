@@ -11,14 +11,14 @@ RUN apt-get update \
 USER gitpod
 
 RUN mkdir -p /home/gitpod/logs              \ 
-    && touch /home/gitpod/logs/mylogs.txt   \  
+    && touch /home/gitpod/logs/myDockerlog.txt   \  
  
  
-RUN echo "Hello from the Dockerfile build\n" >> /home/gitpod/rocksetta/logs/mylogs.txt 
+RUN echo "Hello from the Dockerfile build\n" >> /home/gitpod/logs/myDockerlog.txt 
 
 # Do most of your Docker stuff here 
 
-RUN echo "Good bye from the Dockerfile build\n" >> /home/gitpod/rocksetta/logs/mylogs.txt 
+RUN echo "Good bye from the Dockerfile build\n" >> /home/gitpod/logs/myDockerlog.txt 
 
 
 
