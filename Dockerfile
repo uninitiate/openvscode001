@@ -13,7 +13,7 @@ RUN apt-get update                 \
 
 USER gitpod
 
-RUN mkdir -p /home/gitpod/logs                   \ 
+RUN mkdir -p /home/gitpod/docker-logs                  \ 
     && touch /home/gitpod/docker-logs/myDockerlog.txt   \  
  
  
